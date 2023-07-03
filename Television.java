@@ -1,134 +1,94 @@
+//Class and Objects
 public class Television{
-	public static void main(String[] args){
-	
-	boolean returnedResult=isPrimeNumber(18);
-	System.out.println(returnedResult);
-	int returnedValue=add(20,10);
-	System.out.println(returnedValue);
-	boolean returnedName=checkName("Akanksha");
-	System.out.println(returnedName);
-	boolean returnResult=marks(8.5f);
-	System.out.println(returnResult);
-	int returnProduct=mul(10,8);
-	System.out.println(returnProduct);
-	boolean returnedAge=marriage(20);
-	System.out.println(returnedAge);
-	char returnGender=gender("female");
-	System.out.println("returnGender");
-	boolean returnnumber=adharNumber(1254568l);
-	System.out.println(returnnumber);
-	double returnvelocity=velocity(2.0d,0.3d);
-	System.out.println(returnvelocity);
-	float returnGravity=gravity(2.3f,7.5f);
-	System.out.println(returnGravity);
-	
-	
-	}
-	
-	public static boolean isPrimeNumber(int number){
-		
-		if(number%2==0){
-			System.out.println("is prime number");
-			return true;
-		}
-		else{
-			System.out.println("is not prime number");
-			return false;
-		}
-	}
-	
-	public static int add(int a,int b){
-		int c=a+b;
-		return c;
-		
-	}
-	
-	public static boolean checkName(String name){
-		if(name.length()>=7){
-			System.out.println("name is valid");
-			return true;
-		}
-		else{
-			System.out.println("name is not valid");
-			return false;
-		}
-	}
-	
-	public static boolean marks(float cgpa){
-		if(cgpa>=8.9f){
-			System.out.println("pass");
-			return true;
-		}
-		else{
-			System.out.println("fail");
-			return false;
-		}
-	}
-	
-	public static int mul(int d,int e){
-		int f=d*e;
-		if(f>=2){
-			System.out.println("answer is valid");
-			return f;
-		}
-		else{
-			System.out.println("answer is not valid");
-			return 0;
-		}
-	}
-	
-	public static boolean marriage(int age){
-		if(age>=18){
-			System.out.println("eligible for marriage");
-			return true;
-		}
-		else{
-			System.out.println("not eligible");
-			return false;
-		}
-	}
-	
-	public static char gender(String g){
-		if(g == "female"){
-			System.out.println("gender is female");
-			return 'f';
-		}
-		else{
-			System.out.println("gender is male");
-			return 'm';
-		}
-	}
-	
-	public static boolean adharNumber(long number){
-		if(number>=10){
-			System.out.println("number is valid");
-			return true;
-		}
-		else{
-			System.out.println("number is invalid");
-			return false;
-		}
-	}
-	
-	public static double velocity(double d1,double d2){
-		if(d1>0.0d){
-			System.out.println("velocity is greater than zero");
-			return d1;
-		}
-		else{
-			System.out.println("velocity is lesser than zero");
-		    return d2;
-		}
-	}
-	
-	public static float gravity(float g1,float g2){
-		if(g1 >=6.5f){
-			System.out.println("gravity is high");
-			return g1;
-		}
-		else{
-			System.out.println("gravity is low");
-			return g2;
-		}
-	}
+//states
+static String brand;
+static String screenSize;
+static String resolution;
+static String operatingSystem;
+static String screenType;
+static String speakers;
+static boolean isSmartTv;
+static String design;
+static String model;
+static String colour;
+static String wattage;
+static String modelYear;
+static float weight;
+static String powerConsumption;
+static int usbPorts;
+static boolean isBluetooth;
+static String panel;
+static int numberOfSpeakers;
+static boolean remoteIncluded;
+static String controlMethod;
+
+public Television(String brand,String screenSize,String resolution,String operatingSystem,String screeTtype,String speakers,boolean isSmartTv,String design,String model,String colour,String wattage,String modelYear,float weight,String powerConsumption,int usbPorts,boolean isBluetooth,String panel,int numberOfSpeakers,boolean remoteIncluded,String controlMethod){
+
+this.brand=brand;
+this.screenSize=screenSize;
+this.resolution=resolution;
+this.operatingSystem=operatingSystem;
+this.screenType=screenType;
+this.speakers=speakers;
+this.isSmartTv=isSmartTv;
+this.design=design;
+this.model=model;
+this.colour=colour;
+this.wattage=wattage;
+this.modelYear=modelYear;
+this.weight=weight;
+this.powerConsumption=powerConsumption;
+this.usbPorts=usbPorts;
+this.isBluetooth=isBluetooth;
+this.panel=panel;
+this.numberOfSpeakers=numberOfSpeakers;
+this.remoteIncluded=remoteIncluded;
+this.controlMethod=controlMethod;
+
+}
+//Behaviour
+public static void consumeElectricity(){
+}
+public static void entertainment(){
+}
+public static void toWatch(){
+}
+public static void socialNews(){
+}
+public static void music(){
+}
+public static void videos(){
+}
+public static void videoGames(){
+}
+public static void information(){
+}
+public static void education(){
+}
+public static void weather(){
+}
+
+public static void main(String[] args){
+Television television = new Television("Samsung","32s","1920*1080px","TizenTV","QLED","DolbyDigital",true,"NeoQled","Samsung","Black","157s","2012s",3.5f,"82.96kwh",10,false,"LED",2,true,"controll");
+
+System.out.println(Television.brand);
+System.out.println(Television.screenSize);
+System.out.println(Television.resolution);
+System.out.println(Television.operatingSystem);
+System.out.println(Television.screenType);
+System.out.println(Television.isSmartTv);
+System.out.println(Television.design);
+System.out.println(Television.model);
+System.out.println(Television.colour);
+System.out.println(Television.wattage);
+System.out.println(Television.modelYear);
+System.out.println(Television.weight);
+System.out.println(Television.powerConsumption);
+System.out.println(Television.usbPorts);
+System.out.println(Television.isBluetooth);
+System.out.println(Television.panel);
+System.out.println(Television.numberOfSpeakers);
+System.out.println(Television.remoteIncluded);
+System.out.println(Television.controlMethod);
+}
 }
